@@ -1,0 +1,31 @@
+{
+  "name": "prep2crack",
+  "version": "1.0.0",
+  "description": "Prep2Crack is a site to share interview experience.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gurupritmukhraiya/prep2crack.git"
+  },
+  "keywords": [
+    "review",
+    "interview",
+    "share",
+    "interview",
+    "company",
+    "interview"
+  ],
+  "author": "Guruprit Mukhraiya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gurupritmukhraiya/prep2crack/issues"
+  },
+  "homepage": "https://github.com/gurupritmukhraiya/prep2crack#readme",
+  "devDependencies": {
+    "express": "^4.15.3",
+    "mongoose": "^4.11.1"
+  }
+}
