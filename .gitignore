@@ -1,0 +1,48 @@
+# Explicitly Mentioned files and folders
+node_modules
+vs code settings.json
+launch.json
+
+# Temp files created by editors
+*~
+*.swp
+*.swo
+
+
+# OS generated files
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs and Databases
+*.log
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+
+# Compiled files
+*.exe
+*.class
+*.pyc
+*.pyd
+*.pyo
+*.dll
+*.a
+*.o
+*.so
+*.dynlib
+
+# Package files
+*.jar
+*.war
+*.zip
+*.gz
+*.tar
+*.7z
+*.rar
+*.dmg
+*.pkg
