@@ -1,0 +1,18 @@
+form.required .control-label:after {
+    content:"*";
+    color:red;
+}
+
+.modal-lg {
+    max-width: 70%;
+}
+
+.modal-header{
+    background:   #f39c12   ;
+    color: #fff;
+}
+
+.alert-modal{
+    background: #52be80;
+    color: #fff;
+}

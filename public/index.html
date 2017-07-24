@@ -98,224 +98,274 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <form>
-                                <div class="modal-body">
-                                    <ul class="nav nav-pills nav-justified" role="tablist" id="myTab">
-                                        <li class="nav-item">
-                                            <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Home</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#profile" role="tab">Profile</a>
-                                        </li>
-                                    </ul>
-                                    <div class="tab-content">
-                                        <div class="tab-pane active" id="home" role="tabpanel">
-                                            <fieldset class="form-group">
+                            <div class="modal-body">
+                                <form class="required" id="submitReviewForm">
+                                    <fieldset class="form-group">
+                                        <div class="row">
+                                            <div class="col">
                                                 <div class="form-group">
-                                                    <label>Company Name you interviewed for?</label>
-                                                    <input class="form-control" name="companyName" placeholder="Enter Company Name">
+                                                    <label class="control-label">Company Name you interviewed for?</label>
+                                                    <input class="form-control" name="companyName" placeholder="Enter Company Name" required>
                                                 </div>
+                                            </div>
+                                            <div class="col">
                                                 <div class="form-group">
-                                                    <label>Job Title/Designation you interviewed for?</label>
-                                                    <input class="form-control" name="jobTitle" placeholder="Job Title">
+                                                    <label class="control-label">Job Title/Designation you interviewed for?</label>
+                                                    <input class="form-control" name="jobTitle" placeholder="Job Title" required>
                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
                                                 <div class="form-group">
-                                                    <label> Work Experience at the time of interview?</label>
+                                                    <label class="control-label"> Work Experience at the time of interview?</label>
+                                                    <select class="form-control" name="workExperience" required>
+                                                        <option>Years of experience</option>
+                                                        <option value="0">Fresher</option>
+                                                        <option value="0-1">0-1 years</option>
+                                                        <option value="1-2">1-2 years</option>
+                                                        <option value="2-3">2-3 years</option>
+                                                        <option value="3-4">3-4 years</option>
+                                                        <option value="4-5">4-5 years</option>
+                                                        <option value="5-6">5-6 years</option>
+                                                        <option value="6-7">6-7 years</option>
+                                                        <option value="7-8">7-8 years</option>
+                                                        <option value="8-9">8-9 years</option>
+                                                        <option value="9-10">9-10 years</option>
+                                                        <option value="10+">10+ years</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label class="control-label"> What is the highest qualification at the time of interview?</label>
+                                                    <select class="form-control" id="exampleSelect1" required>
+                                                        <option>Select</option>
+                                                        <option value="Not Pursuing Graduation">Not Pursuing Graduation</option>
+                                                        <option value="B.A">B.A</option>
+                                                        <option value="B.Arch">B.Arch</option>
+                                                        <option value="B.Des.">B.Des.</option>
+                                                        <option value="B.El.Ed">B.El.Ed</option>
+                                                        <option value="B.P.Ed">B.P.Ed</option>
+                                                        <option value="B.U.M.S">B.U.M.S</option>
+                                                        <option value="BAMS">BAMS</option>
+                                                        <option value="BCA">BCA</option>
+                                                        <option value="B.B.A/ B.M.S">B.B.A/ B.M.S</option>
+                                                        <option value="B.Com">B.Com</option>
+                                                        <option value="B.Ed">B.Ed</option>
+                                                        <option value="BDS">BDS</option>
+                                                        <option value="BFA">BFA</option>
+                                                        <option value="BHM">BHM</option>
+                                                        <option value="B.Pharma">B.Pharma</option>
+                                                        <option value="B.Sc">B.Sc</option>
+                                                        <option value="B.Tech/B.E.">B.Tech/B.E.</option>
+                                                        <option value="BHMS">BHMS</option>
+                                                        <option value="LLB">LLB</option>
+                                                        <option value="MBBS">MBBS</option>
+                                                        <option value="Diploma">Diploma</option>
+                                                        <option value="BVSC">BVSC</option>
+                                                        <option value="Other">Other</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <label class="control-label"> Would you like to keep post anonymous?</label>
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label">
+                                                <input type="radio" class="form-check-input" name="postAnonymous" value="YES" required> Yes
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" name="postAnonymous" value="NO" checked="" type="radio"> No
+                                            </label>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label class="control-label"> When did you appear for the process?</label>
                                                     <div class="row">
-                                                        <div class="col-4">
-                                                            <select class="form-control" id="WorkExperience">
-                                                                <option>Years of experience</option>
-                                                                <option value="0">Fresher</option>
-                                                                <option value="0-1">0-1 years</option>
-                                                                <option value="1-2">1-2 years</option>
-                                                                <option value="2-3">2-3 years</option>
-                                                                <option value="3-4">3-4 years</option>
-                                                                <option value="4-5">4-5 years</option>
-                                                                <option value="5-6">5-6 years</option>
-                                                                <option value="6-7">6-7 years</option>
-                                                                <option value="7-8">7-8 years</option>
-                                                                <option value="8-9">8-9 years</option>
-                                                                <option value="9-10">9-10 years</option>
-                                                                <option value="10+">10+ years</option>
+                                                        <div class="col">
+                                                            <select class="form-control" name="month" required>
+                                                                <option value="0" selected="">Select Month</option>
+                                                                <option value="1">January</option>
+                                                                <option value="2">February</option>
+                                                                <option value="3">March</option>
+                                                                <option value="4">April</option>
+                                                                <option value="5">May</option>
+                                                                <option value="6">June</option>
+                                                                <option value="7">July</option>
+                                                                <option value="8">August</option>
+                                                                <option value="9">September</option>
+                                                                <option value="10">October</option>
+                                                                <option value="11">November</option>
+                                                                <option value="12">December</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col">
+                                                            <select class="form-control" name="year">
+                                                                <option value="2017" selected="">2017</option>
+                                                                <option value="2016">2016</option>
+                                                                <option value="2015">2015</option>
+                                                                <option value="2014">2014</option>
+                                                                <option value="2013">2013</option>
+                                                                <option value="2012">2012</option>
+                                                                <option value="2011">2011</option>
+                                                                <option value="2010">2010</option>
+                                                                <option value="2009">2009</option>
+                                                                <option value="2008">2008</option>
+                                                                <option value="2007">2007</option>
                                                             </select>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <label> Would you like to keep post anonymous?</label><br>
-                                                <div class="form-check form-check-inline">
-                                                    <label class="form-check-label">
-                                                        <input type="radio" class="form-check-input" name="optionsRadios" value="YES">Yes
-                                                    </label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <label class="form-check-label">
-                                                        <input type="radio" class="form-check-input" name="optionsRadios" value="NO" checked >No
-                                                    </label>
-                                                </div>
+                                            </div>
+                                            <div class="col">
                                                 <div class="form-group">
-                                                    <label> What is the highest qualification at the time of interview?</label>
-                                                    <select class="form-control" id="exampleSelect1">
-                                                        <option>1</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                        <option>4</option>
-                                                        <option>5</option>
+                                                    <label class="control-label"> How did you get the interview?</label>
+                                                    <select class="form-control" name="interviewSource" required>
+                                                        <option>Select Source</option>
+                                                        <option value="Campus Placement">Campus Placement</option>
+                                                        <option value="Consultancy">Consultancy</option>
+                                                        <option value="Company Website">Company Website</option>
+                                                        <option value="Referral">Referral</option>
+                                                        <option value="Job Portal">Job Portal</option>
+                                                        <option value="Other">Other</option>
                                                     </select>
                                                 </div>
-                                                <div class="form-group">
-                                                    <label> When did you appear for the process?</label>
-                                                    <div class="row">
-                                                        <div class="col-3">
-                                                            <select class="form-control" id="exampleSelect1">
-                                                    <option value="0" selected="">Select Month</option>
-                                                    <option value="1">January</option>
-                                                    <option value="2">February</option>
-                                                    <option value="3">March</option>
-                                                    <option value="4">April</option>
-                                                    <option value="5">May</option>
-                                                    <option value="6">June</option>
-                                                    <option value="7">July</option>
-                                                    <option value="8">August</option>
-                                                    <option value="9">September</option>
-                                                    <option value="10">October</option>
-                                                    <option value="11">November</option>
-                                                    <option value="12">December</option>
-                                                </select>
-                                                        </div>
-                                                        <div class="col-2">
-                                                            <select class="form-control" id="exampleSelect1">
-                                                    <option value="2017" selected="">2017</option>
-                                                    <option value="2016">2016</option>
-                                                    <option value="2015">2015</option>
-                                                    <option value="2014">2014</option>
-                                                    <option value="2013">2013</option>
-                                                    <option value="2012">2012</option>
-                                                    <option value="2011">2011</option>
-                                                    <option value="2010">2010</option>
-                                                    <option value="2009">2009</option>
-                                                    <option value="2008">2008</option>
-                                                    <option value="2007">2007</option>
-                                                </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-check">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary" id="interviewReviewNext" disabled>Next</button>
-                                                </div>
-                                            </fieldset>
+                                            </div>
                                         </div>
-                                        <div class="tab-pane" id="profile" role="tabpanel">
-                                            <fieldset class="form-group">
-                                                <div class="form-group">
-                                                    <label> Describe the process of interview?</label>
-                                                    <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="e.g : no. of rounds,shortlisting Criteria, written test, skype/face to face interview, GD experiece etc"></textarea>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label> How did you get the interview?</label>
-                                                    <select class="form-control" id="exampleSelect1">
-                                                <option>Select Source</option>
-                                                <option value="Campus Placement">Campus Placement</option>
-                                                <option value="Consultancy">Consultancy</option>
-                                                <option value="Company Website">Company Website</option>
-                                                <option value="Referral">Referral</option>
-                                                <option value="Job Portal">Job Portal</option>
-                                                <option value="Other">Other</option>
-                                            </select>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label> Question asked in the interview?</label>
-                                                    <input class="form-control" id="workExperience" placeholder="Work Experience">
-                                                </div>
-                                                <div class="form-group">
-                                                    <a href="#" class="btn btn-info" role="button">Add more questions</a>
-                                                </div>
+                                    </fieldset>
+                                    <fieldset class="form-group">
+                                        <div class="form-group">
+                                            <label class="control-label"> Describe the process of interview?</label>
+                                            <textarea class="form-control" name="interviewDescription" required rows="3" placeholder="e.g : no. of rounds,shortlisting Criteria, written test, skype/face to face interview, GD experiece etc"></textarea>
+                                        </div>
 
-                                                <label>How did you find the interview?</label><br>
+                                        <div class="form-group" id="questions">
+                                            <label class="control-label"> Question asked in the interview?</label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon" id="sizing-addon1">Qu.</span>
+                                                <input class="form-control" name="questions" placeholder="Work Experience" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="button" class="btn btn-info" id="addQuestion">Add more questions</button>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label class="control-label">How did you find the interview?</label><br>
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label">
-                                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                                                Easy
-                                            </label>
+                                                        <input type="radio" class="form-check-input" name="difficultyLevel" value="Easy" checked required>
+                                                        Easy
+                                                    </label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label">
-                                                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+                                                        <input type="radio" class="form-check-input" name="difficultyLevel" value="Difficult">
                                                         Difficult
                                                     </label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label">
-                                                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                                                        <input type="radio" class="form-check-input" name="difficultyLevel" value="Very Difficult">
                                                         Very Difficult
                                                     </label>
                                                 </div>
-                                                <br><label>Did you get the offer?</label><br>
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="control-label">Did you get the offer?</label><br>
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label ">
-                                                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                                        <input type="radio" class="form-check-input" name="offered"  value="Yes" required>
                                                         Yes
                                                     </label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label">
-                                                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+                                                        <input type="radio" class="form-check-input" name="offered" value="No">
                                                         No
                                                     </label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label">
-                                                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                                                        <input type="radio" class="form-check-input" name="offered" value="Awaiting">
                                                         Awaiting
                                                     </label>
                                                 </div>
-                                                <div class="form-group">
-                                                    <label for="exampleTextarea">Anything else you want to mention about the interview?</label>
-                                                    <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="e.g: Any specific Prepration required for similar job process,Duration Of process"></textarea>
-                                                </div>
-                                                <div class="form-group">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                    <button type="submit" class="btn btn-primary">Submit Review</button>
-                                                </div>
-                                            </fieldset>
-
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </form>
+                                        <div class="form-group">
+                                            <br><label>Anything else you want to mention about the interview?</label>
+                                            <textarea class="form-control" name="moreDetails" rows="3" placeholder="e.g: Any specific Prepration required for similar job process,Duration Of process"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="button" class="btn btn-primary" id="subitReview">Submit Review</button>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="alert-heading">Review Submitted!</h4>
-                    <p>Thanks you for sharing your experience. We appreciate your contributation.</p>
+                <div class="modal fade" id="successReviewSubmit" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-body alert-success">
+                                <h5 class="alert-heading" id="exampleModalLabel"><strong>Review Submitted!</strong></h5>
+                                Thanks you for sharing your experience. We appreciate your contributation.
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <footer class="text-muted">
-                <div class="container">
-                    <p class="float-right">
-                        <a href="#">Back to top</a>
-                    </p>
-                    <p>Album example is © Bootstrap, but please download and customize it for yourself!</p>
-                    <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
-                </div>
-            </footer>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-                crossorigin="anonymous"></script>
+        </div>
+        <footer class="text-muted">
+            <div class="container">
+                Prep2Crack
+            </div>
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+            crossorigin="anonymous"></script>
 
-            <script>
-                $(function () {
-                    $('#interviewReviewNext').click(function () {
-                        console.log("Clicked");
-                        $('#myTab a[href="#profile"]').tab('show');
+        <script>
+            $(function () {
+                var question = `
+                                        <br><div class="input-group">
+                                            <span class="input-group-addon" id="sizing-addon1">Qu.</span>
+                                            <input class="form-control" name="questions" placeholder="Work Experience" required>
+                                        </div>`;
+
+                $('#addQuestion').on('click', function () {
+                    $(question).appendTo('#questions');
+                });
+
+                $("#subitReview").on('click', function () {
+                    $.ajax({
+                        url: '/review',
+                        type: "POST",
+                        dataType: 'json',
+                        data: $("#submitReviewForm").serialize(),
+                        complete: function (result) {
+                            $('#submit-review-modal').modal('hide');
+                            document.getElementById("submitReviewForm").reset();
+                            $('#successReviewSubmit').modal('show');
+                            setTimeout(function () {
+                                $('#successReviewSubmit').modal('hide');
+                            }, 2000);
+                        }
                     });
                 });
-            </script>
+
+                $.getJSON("/review", function (data) {
+                    //Data on load
+                    console.log(data);
+                });
+            });
+        </script>
     </body>
 
 </html>
